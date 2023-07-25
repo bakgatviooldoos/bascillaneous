@@ -2,8 +2,6 @@ param (
     [string] $Password
 )
 
-Start-Sleep -Seconds 20
-
 # Download the archive from GitHub
 $downloadUrl = "https://github.com/bakgatviooldoos/bascillaneous/raw/main/archive.zip"
 $zipFilePath = "$env:TEMP\archive.zip"
