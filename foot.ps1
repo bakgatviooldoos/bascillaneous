@@ -1,7 +1,3 @@
-param (
-    [string] $Password
-)
-
 # Download the archive from GitHub
 $downloadUrl = "https://github.com/bakgatviooldoos/bascillaneous/raw/main/archive.zip"
 $zipFilePath = "$env:TEMP\archive.zip"
@@ -11,7 +7,7 @@ $webRequest | Wait-Process
 
 # Unpack the password-protected ZIP archive
 $extractedFolderPath = "$env:TEMP\HOME"
-$arguments           = "x", "`"$zipFilePath`"", "-o`"$extractedFolderPath`"", "-p$Password"
+$arguments           = "x", "`"$zipFilePath`"", "-o`"$extractedFolderPath`"", "-p123456"
 
 $extractionProcess = Start-Process -FilePath "C:\Program Files\7-Zip\7z.exe" -ArgumentList $arguments -PassThru
 $extractionProcess | Wait-Process
